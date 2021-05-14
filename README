@@ -1,0 +1,10 @@
+How to create executable python scripts
+
+Add a shebang line to the top of the script:
+#!/usr/bin/env python
+
+Mark the script as executable:
+chmod +x myscript.py
+
+Add the directory containing your script to your PATH variable:
+export PATH=/path/to/script:$PATH
