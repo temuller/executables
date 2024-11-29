@@ -103,7 +103,9 @@ def flows_photometry(target, subtraction=1):
     phot_df = pd.DataFrame(phot_dir)
     
     # sort by filter, then by mjd
-    sorter_dict = {'B':0, 'gp':1, 'V':2, 'rp':3, 'ip':4}
+    sorter_dict = {'B':0, 'V':1, 'R':2, 'I':3, 
+                   'gp':4, 'rp':5, 'ip':6, 
+                   'Y':7, 'J':8, 'H':9, 'K':10}
     phot_df['filt_num'] = [sorter_dict[filt] for filt in phot_df.filt.values]
     phot_df.sort_values(['filt_num', 'mjd'], inplace=True, ignore_index=True)
     
